@@ -31,6 +31,7 @@ main()
 	printf("身長：%fcm\n", height);
 	printf("体重：%fkg\n", weight);*/
 
+	/*文字型*/
 	char a = 'A';
 	printf("%d\n", a);
 	printf("%c\n", a);
