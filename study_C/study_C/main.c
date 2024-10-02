@@ -1,6 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <stdio.h>
+#include <string.h>
 
 main() 
 {
@@ -32,7 +33,14 @@ main()
 	printf("‘ÌdF%fkg\n", weight);*/
 
 	/*•¶šŒ^*/
-	char a = 'A';
+	/*char a = 'A';
 	printf("%d\n", a);
-	printf("%c\n", a);
+	printf("%c\n", a);*/
+
+	/*•¶š—ñ‚ğ•Ï”‚É‘ã“ü‚·‚é*/
+	char s[10] = "Hello";
+	printf("%s\n", s);
+
+	strcpy(s, "Good bye");
+	printf("%s\n", s);
 }
