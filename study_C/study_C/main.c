@@ -76,8 +76,17 @@ main()
 	printf("1減って%dに戻りました。\n", a);*/
 
 	/*a++と++aの違い*/
-	int a = 1, b = 1;
+	/*int a = 1, b = 1;
 
 	printf("前置だと%dになります。\n", ++a);
-	printf("後置だと%dになります。\n", b++);
+	printf("後置だと%dになります。\n", b++);*/
+
+	/*比較演算子*/
+	int a = 10, b = 20;
+
+	printf("a=%d b=%d\n", a, b);
+	printf("a<b・・・%d\n", a < b);
+	printf("a>b・・・%d\n", a > b);
+	printf("a==b・・・%d\n", a == b);
+	printf("a=b・・・%d\n", a = b);
 }
