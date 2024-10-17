@@ -91,8 +91,14 @@ main()
 	printf("a=b・・・%d\n", a = b);*/
 
 	/*条件演算子*/
-	int a = 30, x;
+	/*int a = 30, x;
 
 	x = (0 <= a && a <= 100) ? a : 0;
-	printf("%d\n", x);
+	printf("%d\n", x);*/
+
+	/*n進数*/
+	int a = 15, b = 0x11;
+
+	printf("10進数の%dは16進数では%X\n", a, a);
+	printf("16進数の%xは10進数では%d\n", b, b);
 }
