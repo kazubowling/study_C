@@ -82,11 +82,17 @@ main()
 	printf("後置だと%dになります。\n", b++);*/
 
 	/*比較演算子*/
-	int a = 10, b = 20;
+	/*int a = 10, b = 20;
 
 	printf("a=%d b=%d\n", a, b);
 	printf("a<b・・・%d\n", a < b);
 	printf("a>b・・・%d\n", a > b);
 	printf("a==b・・・%d\n", a == b);
-	printf("a=b・・・%d\n", a = b);
+	printf("a=b・・・%d\n", a = b);*/
+
+	/*条件演算子*/
+	int a = 30, x;
+
+	x = (0 <= a && a <= 100) ? a : 0;
+	printf("%d\n", x);
 }
