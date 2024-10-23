@@ -1,2 +1,14 @@
 ﻿  main.c
+C:\Users\kazu3\source\repos\study_C\study_C\study_C\main.c(109,9): warning C4477: 'printf' : 書式文字列 '%d' には、型 'int' の引数が必要ですが、可変個引数 1 は型 'size_t' です
+      C:\Users\kazu3\source\repos\study_C\study_C\study_C\main.c(109,9):
+      書式文字列に '%zd' を使用することをお勧めします
+  
+C:\Users\kazu3\source\repos\study_C\study_C\study_C\main.c(110,9): warning C4477: 'printf' : 書式文字列 '%d' には、型 'int' の引数が必要ですが、可変個引数 1 は型 'size_t' です
+      C:\Users\kazu3\source\repos\study_C\study_C\study_C\main.c(110,9):
+      書式文字列に '%zd' を使用することをお勧めします
+  
+C:\Users\kazu3\source\repos\study_C\study_C\study_C\main.c(111,9): warning C4477: 'printf' : 書式文字列 '%d' には、型 'int' の引数が必要ですが、可変個引数 1 は型 'size_t' です
+      C:\Users\kazu3\source\repos\study_C\study_C\study_C\main.c(111,9):
+      書式文字列に '%zd' を使用することをお勧めします
+  
   study_C.vcxproj -> C:\Users\kazu3\source\repos\study_C\study_C\x64\Debug\study_C.exe
