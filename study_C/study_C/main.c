@@ -103,10 +103,17 @@ main()
 	printf("16進数の%xは10進数では%d\n", b, b);*/
 
 	/* ビットとバイト */
-	char c = 1;
+	/* char c = 1;
 	char s[10] = "Hello";
 
 	printf("long型 = %d バイト\n", sizeof(long));
 	printf("char型 = %d バイト\n", sizeof(c));
-	printf("文字列変数 = %d バイト\n", sizeof(s));
+	printf("文字列変数 = %d バイト\n", sizeof(s)); */
+
+	/* 計算の中の型変換 */
+	printf("3÷2=%d\n", 3/2);
+	printf("3÷2=%f\n", 3.0/2.0);
+	printf("3÷2=%f\n", 3.0/2);
+	printf("3÷2=%f\n", 3/2.0);
+
 }
