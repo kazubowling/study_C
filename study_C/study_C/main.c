@@ -168,10 +168,21 @@ main()
 	}*/
 
 	/* for•¶ */
-	int i;
+	/*int i;
 
 	for(i = 0; i < 4; i++)
 	{
 		printf("‚±‚ñ‚É‚¿‚Í%d\n", i);
+	}*/
+
+	/* 2dƒ‹[ƒv */
+	int i, j;
+
+	for (j = 1; j <= 9; j++)
+	{
+		for (i = 1; i <= 9; i++)
+		{
+			printf("%d~%d=%d\n", j, i, j * i);
+		}
 	}
 }
