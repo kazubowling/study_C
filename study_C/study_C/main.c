@@ -149,21 +149,21 @@ main()
 	}*/
 
 	/* 入れ子になったif文 */
-int a = 90;
+	int a = 90;
 
-if (a > 80)
-{
-	if (a == 100)
+	if (a > 80)
 	{
-		printf("満点です。\n");
+		if (a == 100)
+		{
+			printf("満点です。\n");
+		}
+		else
+		{
+			printf("もう少しです。\n");
+		}
 	}
 	else
 	{
-		printf("もう少しです。\n");
+		printf("がんばりましょう。\n");
 	}
-}
-else
-{
-	printf("がんばりましょう。\n");
-}
 }
