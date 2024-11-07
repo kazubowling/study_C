@@ -176,7 +176,7 @@ int main()
 	}*/
 
 	/* 2�d���[�v */
-	int i, j;
+	/*int i, j;
 
 	for (j = 1; j <= 9; j++)
 	{
@@ -184,5 +184,20 @@ int main()
 		{
 			printf("%d×%d=%d\n", j, i, j * i);
 		}
+	}*/
+	/* do~while文*/
+	/*char a;
+	do {
+		a = getchar();
+		printf("%c", a);
+	}while(a != 'e');*/
+
+	/* 繰り返しを中断する*/
+	int a, b = 1;
+	for(a = 0; a < 5; a++)
+	{
+		if(a+b >= 3)
+			break;
+		printf("%d+%d=%d¥n", a, b, a+b);
 	}
 }
