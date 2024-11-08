@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-main()
+int main()
 {
     char c = '\0';
     char prevletter;
@@ -16,7 +16,7 @@ main()
         while(1)
         {
             c = getchar();
-            if(c == '\0')
+            if(c == '\n')
             {
                 if(word_in)
                     wordnum++;
@@ -34,7 +34,7 @@ main()
             else
                 word_in = 1;
         }
-        if(prevletter == '\0')
+        if(prevletter == '\n')
             break;
         printf("ワード数：%d\n", wordnum);
     }
