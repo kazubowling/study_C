@@ -193,11 +193,20 @@ int main()
 	}while(a != 'e');*/
 
 	/* 繰り返しを中断する*/
-	int a, b = 1;
+	/*int a, b = 1;
 	for(a = 0; a < 5; a++)
 	{
 		if(a+b >= 3)
 			break;
 		printf("%d+%d=%d¥n", a, b, a+b);
+	}*/
+
+	/* 繰り返しの次の回に移る*/
+	int a, b = 1;
+	for (a = 1; a < 5; a++)
+	{
+		if(a+b == 3)
+			continue;
+		printf("%d+%d=%d\n", a, b, a+b);
 	}
 }
