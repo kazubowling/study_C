@@ -202,11 +202,34 @@ int main()
 	}*/
 
 	/* 繰り返しの次の回に移る*/
-	int a, b = 1;
+	/*int a, b = 1;
 	for (a = 1; a < 5; a++)
 	{
 		if(a+b == 3)
 			continue;
 		printf("%d+%d=%d\n", a, b, a+b);
+	}*/
+
+	/* switch文*/
+	char a;
+
+	printf("1〜3で好きな数字を入力してください\n");
+	a = getchar();
+
+	switch (a)
+	{
+		case '1':
+			printf("中吉\n");
+			break;
+
+		case '2':
+			printf("大吉\n");
+			break;
+
+		case '3':
+			printf("小吉\n");
+			break;
+		default:
+			printf("入力が間違っています\n");
 	}
 }
