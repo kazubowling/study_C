@@ -1,14 +1,16 @@
 # Makefile for dynamic C file compilation
 
-TARGET = $(basename $(wildcard *.c))  # カレントディレクトリの .c ファイルの名前（拡張子なし）
+SOURCES = $(wildcard *.c)   # カレントディレクトリ内の全ての .c ファイル
+TARGETS = $(SOURCES:.c=)    # .c を取り除いたターゲット名
+
 CC = gcc
-CFLAGS = -o $(TARGET)
+CFLAGS = -o
 
-all: $(TARGET)
-	./$(TARGET)
+all: $(TARGETS)
 
-$(TARGET): $(TARGET).c
-	$(CC) $(TARGET).c $(CFLAGS)
+# 各 .c ファイルに対応するターゲットのビルドルール
+$(TARGETS): %: %.c
+	$(CC) $< $(CFLAGS) $@
 
 clean:
-	rm -f $(TARGET)
+	rm -f $(TARGETS)

@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-main()
+int main()
 {
     char c = '\0';
     char prevletter;
@@ -38,4 +38,6 @@ main()
             break;
         printf("ワード数：%d\n", wordnum);
     }
+
+    return 0;
 }

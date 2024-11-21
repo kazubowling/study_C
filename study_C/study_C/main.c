@@ -211,7 +211,7 @@ int main()
 	}*/
 
 	/* switch文*/
-	char a;
+	/*char a;
 
 	printf("1〜3で好きな数字を入力してください\n");
 	a = getchar();
@@ -231,5 +231,17 @@ int main()
 			break;
 		default:
 			printf("入力が間違っています\n");
+	}*/
+
+	/* 配列要素の参照と代入 */
+	int i;
+	int a[] = {1, 2, 3, 4};
+
+	for(i = 3; i >= 0; i--)
+	{
+		printf("%d ", a[i]);
 	}
+	printf("\n");
+
+	return 0;
 }
