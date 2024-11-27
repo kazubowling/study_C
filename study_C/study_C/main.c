@@ -246,7 +246,7 @@ int main()
 	return 0;*/
 
 	/* 配列と文字列の関係 */
-	int i = 0;
+	/*int i = 0;
 	char a[] = "NET";
 	char b[4];
 
@@ -256,7 +256,13 @@ int main()
 		i++;
 	}
 	b[3] = '\0';
-	printf("%sは逆から読むと%s\n", a, b);
+	printf("%sは逆から読むと%s\n", a, b);*/
+
+	/* 文字列変換関連の関数 */
+	char s1[] = "cat", s2[] = "dog";
+	char s[20];
+	sprintf(s, "I love %s and %s.", s1, s2);
+	printf("「%s」の文字数は%d\n", s, strlen(s));
 
 	return 0;
 }
