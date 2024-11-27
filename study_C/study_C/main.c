@@ -234,7 +234,7 @@ int main()
 	}*/
 
 	/* 配列要素の参照と代入 */
-	int i;
+	/*int i;
 	int a[] = {1, 2, 3, 4};
 
 	for(i = 3; i >= 0; i--)
@@ -242,6 +242,21 @@ int main()
 		printf("%d ", a[i]);
 	}
 	printf("\n");
+
+	return 0;*/
+
+	/* 配列と文字列の関係 */
+	int i = 0;
+	char a[] = "NET";
+	char b[4];
+
+	while(a[i] != '\0')
+	{
+		b[i] = a[2-i];
+		i++;
+	}
+	b[3] = '\0';
+	printf("%sは逆から読むと%s\n", a, b);
 
 	return 0;
 }
