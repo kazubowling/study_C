@@ -259,10 +259,25 @@ int main()
 	printf("%sは逆から読むと%s\n", a, b);*/
 
 	/* 文字列変換関連の関数 */
-	char s1[] = "cat", s2[] = "dog";
+	/*char s1[] = "cat", s2[] = "dog";
 	char s[20];
 	sprintf(s, "I love %s and %s.", s1, s2);
-	printf("「%s」の文字数は%d\n", s, strlen(s));
+	printf("「%s」の文字数は%d\n", s, strlen(s));*/
+
+	/* 多次元配列への代入・初期化・参照 */
+	int x, y;
+	int a[2][3] = {
+		{10, 20, 30},
+		{40, 50, 60}
+	};
+	for(y = 0; y < 2; y++)
+	{
+		for(x = 0; x < 3; x++)
+		{
+			printf("a[%d][%d] = %d", y, x, a[y][x]);
+		}
+		printf("\n");
+	}
 
 	return 0;
 }
