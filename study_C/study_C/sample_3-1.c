@@ -38,4 +38,6 @@ int main()
             break;
         printf("ワード数：%d\n", wordnum);
     }
+
+    return 0;
 }
