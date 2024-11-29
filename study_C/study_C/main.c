@@ -291,7 +291,7 @@ int main()
 	printf("変数xの値は%dです\n", y);*/
 
 	/* NULLポインタ */
-	char s[] = "I love cats.";
+	/*char s[] = "I love cats.";
 	char c = 'd';
 	char *p = NULL;
 
@@ -304,7 +304,12 @@ int main()
 	else
 	{
 		printf("を発見しました。\n");
-	}
+	}*/
+
+	/* ポインタを使った配列の参照 */
+	int a[4] = {10, 20, 30, 40};
+	printf("配列a[3]の値は%d\n", *(a+3));
+	printf("配列a[0]の値に3を足すと、%d\n", *a+3);
 
 	return 0;
 }
