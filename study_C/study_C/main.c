@@ -265,7 +265,7 @@ int main()
 	printf("「%s」の文字数は%d\n", s, strlen(s));*/
 
 	/* 多次元配列への代入・初期化・参照 */
-	int x, y;
+	/*int x, y;
 	int a[2][3] = {
 		{10, 20, 30},
 		{40, 50, 60}
@@ -277,7 +277,12 @@ int main()
 			printf("a[%d][%d] = %d", y, x, a[y][x]);
 		}
 		printf("\n");
-	}
+	}*/
+
+	char a;
+	short b;
+
+	printf("aのアドレスは%p、bのアドレスは%p\n", &a, &b);
 
 	return 0;
 }
