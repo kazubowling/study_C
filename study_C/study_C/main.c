@@ -285,10 +285,26 @@ int main()
 	printf("aのアドレスは%p、bのアドレスは%p\n", &a, &b);*/
 
 	/* ポインタがさす値の参照 */
-	char x = 4, y;
+	/*char x = 4, y;
 	char *p = &x;
 	y = *p;
-	printf("変数xの値は%dです\n", y);
+	printf("変数xの値は%dです\n", y);*/
+
+	/* NULLポインタ */
+	char s[] = "I love cats.";
+	char c = 'd';
+	char *p = NULL;
+
+	printf("文字列「%s」の中に文字「%c」", s, c);
+	p = strchr(s, c);
+	if(!p)
+	{
+		printf("はありません。\n");
+	}
+	else
+	{
+		printf("を発見しました。\n");
+	}
 
 	return 0;
 }
