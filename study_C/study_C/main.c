@@ -284,6 +284,7 @@ int main()
 
 	printf("aのアドレスは%p、bのアドレスは%p\n", &a, &b);*/
 
+	/* ポインタがさす値の参照 */
 	char x = 4, y;
 	char *p = &x;
 	y = *p;
