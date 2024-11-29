@@ -279,10 +279,15 @@ int main()
 		printf("\n");
 	}*/
 
-	char a;
+	/*char a;
 	short b;
 
-	printf("aのアドレスは%p、bのアドレスは%p\n", &a, &b);
+	printf("aのアドレスは%p、bのアドレスは%p\n", &a, &b);*/
+
+	char x = 4, y;
+	char *p = &x;
+	y = *p;
+	printf("変数xの値は%dです\n", y);
 
 	return 0;
 }
