@@ -1,6 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 int main() 
@@ -307,9 +308,20 @@ int main()
 	}*/
 
 	/* ポインタを使った配列の参照 */
-	int a[4] = {10, 20, 30, 40};
+	/*int a[4] = {10, 20, 30, 40};
 	printf("配列a[3]の値は%d\n", *(a+3));
-	printf("配列a[0]の値に3を足すと、%d\n", *a+3);
+	printf("配列a[0]の値に3を足すと、%d\n", *a+3);*/
+
+	char *b;
+	char a[4] = {20, 40, 30, 10};
+	b = (char *)malloc(sizeof(char)*200);
+	if(!b)
+	{
+		return 0;
+	}
+	memcpy(b, a, sizeof(char)*4);
+	printf("%d %d %d %d\n", b[0], b[1], b[2], b[3]);
+	free(b);
 
 	return 0;
 }
