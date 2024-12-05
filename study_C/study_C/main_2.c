@@ -31,7 +31,7 @@ int main()
 }*/
 
 /* ローカル変数とグローバル変数 */
-int y;
+/*int y;
 int z;
 
 void myfunc(int a)
@@ -53,4 +53,21 @@ int main()
     printf("x, y, zの値は%d, %d, %d\n", x, y, z);
     myfunc(5);
     printf("x, y, zの値は%d, %d, %d\n", x, y, z);
+}*/
+
+
+/* プロトタイプ */
+void dispnum(int);
+
+int main()
+{
+    int x = 10;
+
+    dispnum(5);
+    dispnum(x);
+}
+
+void dispnum(int a)
+{
+    printf("引数の値は：%d\n", a);
 }
