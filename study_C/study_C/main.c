@@ -312,6 +312,7 @@ int main()
 	printf("配列a[3]の値は%d\n", *(a+3));
 	printf("配列a[0]の値に3を足すと、%d\n", *a+3);*/
 
+	/* メモリ操作関数 */
 	char *b;
 	char a[4] = {20, 40, 30, 10};
 	b = (char *)malloc(sizeof(char)*200);
