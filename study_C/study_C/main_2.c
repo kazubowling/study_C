@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 /* 関数呼び出しの基本 */
 /*void dispnum(int a)
@@ -73,7 +74,7 @@ void dispnum(int a)
 }*/
 
 /* 値渡しと参照渡し */
-void swapbyval(int, int);
+/*void swapbyval(int, int);
 void swapbyref(int *, int *);
 
 int main()
@@ -101,4 +102,26 @@ void swapbyref(int *x, int *y) //ポインタとして宣言
     temp = *x;
     *x = *y;
     *y = temp;
+}*/
+
+/* maine()関数の書式 */
+int main(int argc, char *argv[])
+{
+    int i;
+
+    if(argc <= 1){
+        return 1;
+    }
+    if(strcmp(argv[1], "enum") == 0)
+    {
+        for(i = 0; i < argc; i++)
+        {
+            printf("argv[%d]:%s\n", i, argv[i]);
+        }
+    }
+    else if(strcmp(argv[1], "count") == 0)
+    {
+        printf("コマンドライン引数の数: %d\n", argc - 1);
+    }
+    return 0;
 }
