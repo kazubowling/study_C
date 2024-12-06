@@ -57,7 +57,7 @@ int main()
 
 
 /* プロトタイプ */
-void dispnum(int);
+/*void dispnum(int);
 
 int main()
 {
@@ -70,4 +70,35 @@ int main()
 void dispnum(int a)
 {
     printf("引数の値は：%d\n", a);
+}*/
+
+/* 値渡しと参照渡し */
+void swapbyval(int, int);
+void swapbyref(int *, int *);
+
+int main()
+{
+    int a = 2, b = 7;
+
+    printf("a=%d、b=%d\n", a, b);
+    swapbyval(a, b); //値渡し
+    printf("a=%d、b=%d\n", a, b);
+    swapbyref(&a, &b); //参照渡し
+    printf("a=%d、b=%d\n", a, b);
+}
+
+void swapbyval(int x, int y) 
+{
+    int temp;
+    temp = x;
+    x = y;
+    y = temp;
+}
+
+void swapbyref(int *x, int *y) //ポインタとして宣言
+{
+    int temp;
+    temp = *x;
+    *x = *y;
+    *y = temp;
 }
