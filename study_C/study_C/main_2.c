@@ -105,7 +105,7 @@ void swapbyref(int *x, int *y) //ポインタとして宣言
 }*/
 
 /* maine()関数の書式 */
-int main(int argc, char *argv[])
+/*int main(int argc, char *argv[])
 {
     int i;
 
@@ -124,4 +124,36 @@ int main(int argc, char *argv[])
         printf("コマンドライン引数の数: %d\n", argc - 1);
     }
     return 0;
+}*/
+
+/* テキストファイルの読み込み手順 */
+int main()
+{
+    FILE *fp;
+    char s[20];
+    int i = 1;
+    fp = fopen("abc.txt", "r");
+    
+    if(fp == NULL)
+    {
+        return 0;
+    }
+    /*while(1)
+    {
+        fgets(s, 20, fp);
+        if(feof(fp))
+        {
+            break;
+        }
+        printf("%04d:%s", i, s);
+        i++;
+    }*/
+
+    while(fgets(s, sizeof(s), fp) != NULL)
+    {
+        printf("%04d:%s", i, s);
+        i++;
+    }
+
+    fclose(fp);
 }
