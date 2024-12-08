@@ -127,33 +127,51 @@ void swapbyref(int *x, int *y) //ポインタとして宣言
 }*/
 
 /* テキストファイルの読み込み手順 */
+// int main()
+// {
+//     FILE *fp;
+//     char s[20];
+//     int i = 1;
+//     fp = fopen("abc.txt", "r");
+    
+//     if(fp == NULL)
+//     {
+//         return 0;
+//     }
+//     /*while(1)
+//     {
+//         fgets(s, 20, fp);
+//         if(feof(fp))
+//         {
+//             break;
+//         }
+//         printf("%04d:%s", i, s);
+//         i++;
+//     }*/
+
+//     while(fgets(s, sizeof(s), fp) != NULL)
+//     {
+//         printf("%04d:%s", i, s);
+//         i++;
+//     }
+
+//     fclose(fp);
+// }
+
 int main()
 {
     FILE *fp;
-    char s[20];
-    int i = 1;
-    fp = fopen("abc.txt", "r");
-    
+    int a = 100, b = 5, c = 40;
+    int x = 1, y = 10, z = 100;
+    char delm[] = "----====----\n";
+
+    fp = fopen("mat.txt", "w");
     if(fp == NULL)
     {
         return 0;
     }
-    /*while(1)
-    {
-        fgets(s, 20, fp);
-        if(feof(fp))
-        {
-            break;
-        }
-        printf("%04d:%s", i, s);
-        i++;
-    }*/
-
-    while(fgets(s, sizeof(s), fp) != NULL)
-    {
-        printf("%04d:%s", i, s);
-        i++;
-    }
-
+    fputs(delm, fp);
+    fprintf(fp, "%4d%4d%4d\n%4d%4d%4d\n", a, b, c, x, y ,z);
+    fputs(delm, fp);
     fclose(fp);
 }
