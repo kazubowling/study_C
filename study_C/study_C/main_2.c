@@ -158,7 +158,7 @@ void swapbyref(int *x, int *y) //ポインタとして宣言
 //     fclose(fp);
 // }
 
-int main()
+/*int main()
 {
     FILE *fp;
     int a = 100, b = 5, c = 40;
@@ -174,4 +174,44 @@ int main()
     fprintf(fp, "%4d%4d%4d\n%4d%4d%4d\n", a, b, c, x, y ,z);
     fputs(delm, fp);
     fclose(fp);
+}*/
+
+/* バイナリファイルの書き出し手順 */
+int main()
+{
+    FILE *fp;
+    char filename[] = "bintest.dat";
+    int buf_w[10], buf_r[10];
+    int i;
+
+    for(i = 0; i < 10; i++)
+    {
+        buf_w[i] = (i+1) * 10;
+    }
+    if(!(fp = fopen(filename, "wb")))
+    {
+        return 0;
+    }
+    if(fwrite(buf_w, sizeof(int), 10, fp) != 10)
+    {
+        fclose(fp);
+        return 0;
+    }
+    fclose(fp);
+
+    if(!(fp = fopen(filename, "rb")))
+    {
+        return 0;
+    }
+    if(fread(buf_r, sizeof(int), 10, fp) != 10)
+    {
+        fclose(fp);
+        return 0;
+    }
+    fclose(fp);
+
+    for(i = 0; i < 10; i++)
+    {
+        printf("%d ", buf_r[i]);
+    }
 }
