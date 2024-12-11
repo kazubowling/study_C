@@ -177,7 +177,7 @@ void swapbyref(int *x, int *y) //ポインタとして宣言
 }*/
 
 /* バイナリファイルの書き出し手順 */
-int main()
+/*int main()
 {
     FILE *fp;
     char filename[] = "bintest.dat";
@@ -214,4 +214,13 @@ int main()
     {
         printf("%d ", buf_r[i]);
     }
+}*/
+
+/* 標準入出力ファイルの種類 */
+int main()
+{
+    char s[30];
+    fgets(s, 29, stdin);
+    fputs(s, stdout);
+    fputs("error!\n", stderr);
 }
