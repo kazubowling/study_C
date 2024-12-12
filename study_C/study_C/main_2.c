@@ -217,10 +217,41 @@ void swapbyref(int *x, int *y) //ポインタとして宣言
 }*/
 
 /* 標準入出力ファイルの種類 */
-int main()
+/*int main()
 {
     char s[30];
     fgets(s, 29, stdin);
     fputs(s, stdout);
     fputs("error!\n", stderr);
+}*/
+
+/* キーボードからのデータ入力 */
+int main()
+{
+    int a, b = 7;
+    char s[40];
+    printf("名前を入力してください\n");
+
+    fgets(s, sizeof(s), stdin);
+    
+    printf("数あてクイズ！0から9の数字を入力してね\n");
+    while(a != b)
+    {
+        scanf("%d", &a);
+
+        if((a == b -1) || (a == b +1))
+        {
+            printf("おしい！\n");
+        }
+        else if(a > b+1)
+        {
+            printf("もっと小さい数です\n");
+        }
+        else if(a < b-1)
+        {
+            printf("もっと大きい数です\n");
+        }
+    }
+
+    printf("正解！%sさん、おめでとう！\n", s);
 }
