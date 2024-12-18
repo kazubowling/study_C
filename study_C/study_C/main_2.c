@@ -226,7 +226,7 @@ void swapbyref(int *x, int *y) //ポインタとして宣言
 }*/
 
 /* キーボードからのデータ入力 */
-int main()
+/*int main()
 {
     int a, b = 7;
     char s[40];
@@ -254,4 +254,18 @@ int main()
     }
 
     printf("正解！%sさん、おめでとう！\n", s);
+}*/
+
+// 構造体
+struct _point2d{
+    double x;
+    double y;
+} pt;
+
+int main()
+{
+    pt.x = 30.0;
+    pt.y = 23.6;
+
+    printf("pt = (%4.1f, %4.1f)\n", pt.x, pt.y);
 }
