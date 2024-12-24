@@ -257,7 +257,7 @@ void swapbyref(int *x, int *y) //ポインタとして宣言
 }*/
 
 // 構造体
-struct _point2d{
+/*struct _point2d{
     double x;
     double y;
 } pt;
@@ -268,4 +268,19 @@ int main()
     pt.y = 23.6;
 
     printf("pt = (%4.1f, %4.1f)\n", pt.x, pt.y);
+}*/
+
+// ポインタを使った構造体の参照
+struct _colorpoint2d{
+    double x, y;
+    int colorid;
+}cpt;
+struct _colorpoint2d *ppt = &cpt;
+
+int main()
+{
+    ppt->x = 2.4;
+    ppt->y = 3.2;
+    ppt->colorid = 1;
+    printf("(%3.1f, %3.1f) color=%d\n", ppt->x, ppt->y, ppt->colorid);
 }
