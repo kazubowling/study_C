@@ -271,7 +271,7 @@ int main()
 }*/
 
 // ポインタを使った構造体の参照
-struct _colorpoint2d{
+/*struct _colorpoint2d{
     double x, y;
     int colorid;
 }cpt;
@@ -283,4 +283,24 @@ int main()
     ppt->y = 3.2;
     ppt->colorid = 1;
     printf("(%3.1f, %3.1f) color=%d\n", ppt->x, ppt->y, ppt->colorid);
+}*/
+
+// 構造体名を変更
+typedef struct _PROFILE {
+    char name[40];
+    int age;
+} PROFILE;
+
+int main()
+{
+    PROFILE prof[2] = {
+        {"Maiko", 20},
+        {"Naoki", 31}
+    };
+
+    int i;
+    for(i = 0; i < 2; i++)
+    {
+        printf("%sさんは%d歳\n", prof[i].name, prof[i].age);
+    }
 }
