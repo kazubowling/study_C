@@ -339,6 +339,7 @@ int main()
 // }
 
 // 引数付きマクロ
+<<<<<<< HEAD
 // #define HIKU(x, y) ((x)-(y))
 
 // int main()
@@ -355,4 +356,12 @@ int main()
     while(i <= 5){
         printf("結果：%d\n", JIJYO(i++));
     }
+=======
+#include <stdio.h>
+#define HIKU(x, y) ((x)-(y))
+
+int main()
+{
+    printf("マクロの実行結果：%d\n", HIKU(5, 3));
+>>>>>>> f4d001f (引数付きマクロ)
 }
