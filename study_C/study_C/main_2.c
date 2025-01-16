@@ -306,21 +306,34 @@ int main()
 // }
 
 // const宣言
-void increment(void);
+// void increment(void);
+
+// int main()
+// {
+//     int i;
+//     for(i = 0; i < 3; i++)
+//     {
+//         increment();
+//     }
+// }
+
+// void increment()
+// {
+//     int a = 0;
+//     static int b = 0;
+//     a++; b++;
+//     printf("a:%d, b:%d\n", a, b);
+// }
+
+// マクロ(置換-define)
+
+#define LOOPNUM 3
 
 int main()
 {
     int i;
-    for(i = 0; i < 3; i++)
+    for(i = 0; i < LOOPNUM; i++)
     {
-        increment();
+        printf("LoopCount:%d\n", i+1);
     }
-}
-
-void increment()
-{
-    int a = 0;
-    static int b = 0;
-    a++; b++;
-    printf("a:%d, b:%d\n", a, b);
 }
