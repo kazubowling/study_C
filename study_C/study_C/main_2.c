@@ -286,21 +286,41 @@ int main()
 }*/
 
 // 構造体名を変更
-typedef struct _PROFILE {
-    char name[40];
-    int age;
-} PROFILE;
+// typedef struct _PROFILE {
+//     char name[40];
+//     int age;
+// } PROFILE;
+
+// int main()
+// {
+//     PROFILE prof[2] = {
+//         {"Maiko", 20},
+//         {"Naoki", 31}
+//     };
+
+//     int i;
+//     for(i = 0; i < 2; i++)
+//     {
+//         printf("%sさんは%d歳\n", prof[i].name, prof[i].age);
+//     }
+// }
+
+// const宣言
+void increment(void);
 
 int main()
 {
-    PROFILE prof[2] = {
-        {"Maiko", 20},
-        {"Naoki", 31}
-    };
-
     int i;
-    for(i = 0; i < 2; i++)
+    for(i = 0; i < 3; i++)
     {
-        printf("%sさんは%d歳\n", prof[i].name, prof[i].age);
+        increment();
     }
+}
+
+void increment()
+{
+    int a = 0;
+    static int b = 0;
+    a++; b++;
+    printf("a:%d, b:%d\n", a, b);
 }
