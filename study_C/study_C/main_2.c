@@ -327,13 +327,21 @@ int main()
 
 // マクロ(置換-define)
 
-#define LOOPNUM 3
+// #define LOOPNUM 3
+
+// int main()
+// {
+//     int i;
+//     for(i = 0; i < LOOPNUM; i++)
+//     {
+//         printf("LoopCount:%d\n", i+1);
+//     }
+// }
+
+// 引数付きマクロ
+#define HIKU(x, y) ((x)-(y))
 
 int main()
 {
-    int i;
-    for(i = 0; i < LOOPNUM; i++)
-    {
-        printf("LoopCount:%d\n", i+1);
-    }
+    printf("マクロの実行結果：%d\n", HIKU(5, 3));
 }
