@@ -12,5 +12,8 @@ all: $(TARGETS)
 $(TARGETS): %: %.c
 	$(CC) $< $(CFLAGS) $@
 
+Sample_8-1: Sample_8-1.c callib.c
+	$(CC) Sample_8-1.c callib.c $(CFLAGS) Sample_8-1
+
 clean:
 	rm -f $(TARGETS)
