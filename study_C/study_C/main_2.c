@@ -347,8 +347,7 @@ int main()
 //     printf("マクロの実行結果：%d\n", HIKU(5, 3));
 // }
 
-// 引数付きマクロ使用次の注意
-#include <stdio.h>
+// 引数付きマクロ使用時の注意
 #define JIJYO(x) ((x)*(x))
 
 int main()
@@ -357,6 +356,5 @@ int main()
     while(i <= 5)
     {
         printf("結果：%d\n", JIJYO(i++));
-        return 0;
     }
 }
