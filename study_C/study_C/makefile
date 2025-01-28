@@ -1,19 +1,20 @@
 # Makefile for dynamic C file compilation
 
 SOURCES = $(wildcard *.c)   # カレントディレクトリ内の全ての .c ファイル
-TARGETS = $(SOURCES:.c=)    # .c を取り除いたターゲット名
+TARGETS = $(filter-out callib, $(SOURCES:.c=))  # callib を除外したターゲット名
 
 CC = gcc
 CFLAGS = -o
 
-all: $(TARGETS)
+all: $(TARGETS) Sample_8-1
 
-# 各 .c ファイルに対応するターゲットのビルドルール
+# 各 .c ファイルに対応する汎用ビルドルール
 $(TARGETS): %: %.c
 	$(CC) $< $(CFLAGS) $@
 
+# 特定ターゲット Sample_8-1 のビルドルール
 Sample_8-1: Sample_8-1.c callib.c
 	$(CC) Sample_8-1.c callib.c $(CFLAGS) Sample_8-1
 
 clean:
-	rm -f $(TARGETS)
+	rm -f $(TARGETS) Sample_8-1
