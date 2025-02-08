@@ -2,6 +2,7 @@
 
 SOURCES = $(wildcard *.c)   # カレントディレクトリ内の全ての .c ファイル
 TARGETS = $(filter-out callib, $(SOURCES:.c=))  # callib を除外したターゲット名
+CFLAGS = -o -Wno-format-security -Wno-format -Wno-sign-compare -Wno-unused-variable
 
 CC = gcc
 CFLAGS = -o
