@@ -348,13 +348,39 @@ int main()
 // }
 
 // 引数付きマクロ使用時の注意
-#define JIJYO(x) ((x)*(x))
+// #define JIJYO(x) ((x)*(x))
+
+// int main()
+// {
+//     int i = 1;
+//     while(i <= 5)
+//     {
+//         printf("結果：%d\n", JIJYO(i++));
+//     }
+// }
+
+
+// 共用体
+union _user{
+    int userid; /* ユーザーID */
+    char name[10]; /* 名前 */
+} user;
 
 int main()
 {
-    int i = 1;
-    while(i <= 5)
+    int flag = 0;
+    printf("入力項目は？ (0=ID 1=名前) ");
+    scanf("%d", &flag);
+    if(flag)
     {
-        printf("結果：%d\n", JIJYO(i++));
+        printf("name? ");
+        scanf("%s", user.name);
+        printf("名前は%sですね。\n", user.name);
+    }
+    else
+    {
+        printf("ID? ");
+        scanf("%d", &(user.userid));
+        printf("IDは%dですね。\n", user.userid);
     }
 }
