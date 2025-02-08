@@ -386,15 +386,33 @@ int main()
 // }
 
 // シフト演算子
+// int main()
+// {
+//     char a = 10;
+//     char b = 9;
+//     char c = 1;
+//     printf("%d & %d = %d\n", a, b, a & b);
+//     printf("%d | %d = %d\n", a, b, a | b);
+//     printf("%d ^ %d = %d\n", a, b, a ^ b);
+//     printf("%d << %d = %d\n", a, c, a << c);
+//     printf("%d >> %d = %d\n", a, c, a >> c);
+//     printf("~%u = %uu\n", a, (unsigned char)~a);
+// }
+
+// 時間に関する関数
+#include <time.h>
+
 int main()
 {
-    char a = 10;
-    char b = 9;
-    char c = 1;
-    printf("%d & %d = %d\n", a, b, a & b);
-    printf("%d | %d = %d\n", a, b, a | b);
-    printf("%d ^ %d = %d\n", a, b, a ^ b);
-    printf("%d << %d = %d\n", a, c, a << c);
-    printf("%d >> %d = %d\n", a, c, a >> c);
-    printf("~%u = %uu\n", a, (unsigned char)~a);
+    time_t ct;
+    struct tm *now;
+    ct = time(NULL);
+    now = localtime(&ct);
+
+    printf("%d年%d月%d日　%02d:%02d:%02d\n",
+        (now->tm_year)+1900,
+        (now->tm_mon)+1, now->tm_mday,
+        now->tm_hour, now->tm_min, now->tm_sec);
+
+    printf("%s", ctime(&ct));
 }
