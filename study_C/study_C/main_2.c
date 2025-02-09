@@ -400,19 +400,35 @@ int main()
 // }
 
 // 時間に関する関数
-#include <time.h>
+// #include <time.h>
+
+// int main()
+// {
+//     time_t ct;
+//     struct tm *now;
+//     ct = time(NULL);
+//     now = localtime(&ct);
+
+//     printf("%d年%d月%d日　%02d:%02d:%02d\n",
+//         (now->tm_year)+1900,
+//         (now->tm_mon)+1, now->tm_mday,
+//         now->tm_hour, now->tm_min, now->tm_sec);
+
+//     printf("%s", ctime(&ct));
+// }
+
+
+// 数学関数
+#include <stdio.h>
+#include <math.h>
+#define PI 3.14159
 
 int main()
 {
-    time_t ct;
-    struct tm *now;
-    ct = time(NULL);
-    now = localtime(&ct);
-
-    printf("%d年%d月%d日　%02d:%02d:%02d\n",
-        (now->tm_year)+1900,
-        (now->tm_mon)+1, now->tm_mday,
-        now->tm_hour, now->tm_min, now->tm_sec);
-
-    printf("%s", ctime(&ct));
+    int kakudo = 30;
+    double a, b, c;
+    a = sin(kakudo*PI/180);
+    b = cos(kakudo*PI/180);
+    c = tan(kakudo*PI/180);
+    printf("角度%d度\nsin %f\ncos %f\ntan %f\n", kakudo, a, b, c);
 }
